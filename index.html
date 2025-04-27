@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hope Avenue</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'CooperBlack';
+      src: url('CooperBlack.ttf') format('truetype');
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="nav-container">
+      <div class="logo-title">
+        <img src="your-logo.png" alt="Hope Avenue Logo" class="logo">
+        <h1>Hope Avenue</h1>
+      </div>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -23,12 +36,11 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <h1>HOPE AVENUE</h1>
     </div>
   </header>
 
   <section class="what-we-do">
-    <h2>WHAT WE DO</h2>
+    <h2>What We Do</h2>
     <p>We are so happy you're interested in getting involved with our work here at Hope Avenue. There are so many ways for you to help, and we truly appreciate each and every effort. By lending your support, you'll become a valuable part of our Non-Profit Organization and help to strengthen our operations.</p>
     <p>Our high school youth internship program gives interns the opportunity to immerse themselves in the community and give aid. Over the summer of 2020, GIFT has made efforts to help the community, even through the Coronavirus Pandemic. Despite the quarantine, we gathered supplies for the homeless, clothing, and supplies for US Military Troops, and supplied Senior Homes with the resources they need to thrive during this time.</p>
   </section>
@@ -37,9 +49,8 @@
     <div class="image">
       <img src="tent-donation.jpg" alt="Donation at tent">
     </div>
-    <div class="text">
-      <h3>GIFT FOOD DONATION DRIVES (BAY AREA)</h3>
-      <p>If you are from the bay area, feel free to contact us if you would like to participate in the food donation drives. Your donations will go to homeless shelters in Oakland, Berkeley, Livermore and/or Emeryville. Each months donations will differ so be sure to email us if you would like to participate!</p>
+    <div class="text" id="changingText">
+      <!-- This content will change dynamically -->
     </div>
   </section>
 
@@ -64,5 +75,7 @@
     </div>
     <p>©2022 by Hope Avenue. Proudly created with Wix.com</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
