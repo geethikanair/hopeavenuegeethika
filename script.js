@@ -34,19 +34,22 @@ let currentSlide = 0;
 function showSlide(index) {
   const changingText = document.getElementById('changingText');
 
-  // Reset and restart the animation
-  changingText.style.animation = 'none';
-  void changingText.offsetWidth; // Reflow trick to restart animation
-  changingText.style.animation = 'slideIn 1s ease forwards';
+  // Start slide out
+  changingText.style.animation = 'slideOut 1s ease forwards';
 
-  changingText.innerHTML = `
-    <h3>${slides[index].title}</h3>
-    <p>${slides[index].text}</p>
-  `;
+  // After slideOut animation, change text and slide in
+  setTimeout(() => {
+    changingText.innerHTML = `
+      <h3>${slides[index].title}</h3>
+      <p>${slides[index].text}</p>
+    `;
 
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
+    changingText.style.animation = 'slideIn 1s ease forwards';
+
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }, 900); // match the slideOut timing
 }
 
 function nextSlide() {
