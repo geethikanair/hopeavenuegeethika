@@ -146,3 +146,20 @@ footer {
   width: 20px;
   margin: 5px;
 }
+
+/* Animation for sliding */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.donation-drive .text {
+  animation: slideIn 1s ease forwards;
+}
+
