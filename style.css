@@ -155,14 +155,3 @@ nav {
   }
 }
 
-/* Donation drive text animation - default state */
-.donation-drive .text {
-  animation: slideIn 1s ease forwards;
-}
-.nav-left a:hover {
-  background-color: white;
-  color: #006400;
-  padding: 5px 12px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 100, 0, 0.2);
-}
