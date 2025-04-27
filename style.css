@@ -1,153 +1,54 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+const slides = [
+  {
+    title: "Gift Food Donation Drives (Bay Area)",
+    text: "If you are from the bay area, feel free to contact us if you would like to participate in the food donation drives. Your donations will go to homeless shelters in Oakland, Berkeley, Livermore and/or Emeryville. Each month's donations will differ so be sure to email us if you would like to participate!"
+  },
+  {
+    title: "Ornament Initiative",
+    text: "The GIFT Internship program kicked off the Ornament Initiative and reached and went beyond their goal of 300 wreath ornaments and 200 candy cane ornaments in a matter of 2 weeks! The ornaments will be delivered to Children’s Hospitals, Senior Homes, and more before the Holidays!"
+  },
+  {
+    title: "Toy Drive",
+    text: "Over the Holidays, we gathered and sent out toys to various organizations, such as Hope in the Hood, which gave toys to those who can't afford them."
+  },
+  {
+    title: "Creative Alliance",
+    text: "A volunteer opportunity for middle schoolers in which they work with high schoolers to give back to their community! Sign-up link: tinyurl.com/4b9ktsua"
+  },
+  {
+    title: "Beanie Drive",
+    text: "Currently, the beanie group is local to the bay area. We work together as a community to donate handmade beanies to Blue Star Moms, Stanford NICU, military troops, and homeless shelters. Providing warmth and comfort for the past several winters. Contact us if you would like to participate!"
+  },
+  {
+    title: "Masks",
+    text: "Despite the unexpected and harsh halt that the world had to come to due to COVID-19, our community got together to provide for the local hospitals and families. Starting from scratch, GIFT has worked with the community to donate more than 5000 masks to alleviate the inconvenience of a lack of resources in our local hospitals."
+  },
+  {
+    title: "Virtual Hugs",
+    text: "The community worked together to make around 400 heartwarming, encouraging, and supportive cards for senior homes that were affected by the strict isolation during quarantine."
+  }
+];
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const changingText = document.getElementById('changingText');
+  changingText.innerHTML = `
+    <h3>${slides[index].title}</h3>
+    <p>${slides[index].text}</p>
+  `;
+
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
 }
 
-body {
-  font-family: 'Lato', sans-serif;
-  background-color: #fff;
-  color: #333;
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
 }
 
-/* Header & Nav */
-header {
-  background-color: #7ca16c;
-}
+setInterval(nextSlide, 10000); // Change every 10 seconds
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 50px;
-}
-
-.logo-title h1 {
-  font-family: 'CooperBlack', sans-serif;
-  font-size: 32px;
-  color: white;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: white;
-  color: #7ca16c;
-}
-
-/* What We Do Section */
-.what-we-do {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.what-we-do h2 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #7ca16c;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
-
-.what-we-do p {
-  max-width: 800px;
-  margin: 0 auto 15px;
-  font-size: 16px;
-}
-
-/* Donation Drive Section */
-.donation-drive {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background: #f7f7f7;
-  margin: 40px 0;
-  padding: 20px;
-  gap: 20px;
-}
-
-.donation-drive .image img {
-  width: 300px;
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-.donation-drive .text {
-  max-width: 400px;
-}
-
-.donation-drive .text h3 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  color: #7ca16c;
-  margin-bottom: 10px;
-  text-transform: capitalize;
-}
-
-.donation-drive .text p {
-  font-size: 14px;
-}
-
-/* Carousel Dots */
-.carousel-dots {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.carousel-dots .dot {
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-}
-
-.carousel-dots .active {
-  background-color: #333;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 12px;
-  color: #666;
-  padding: 20px;
-}
-
-.footer-logo {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-.social-icons img {
-  width: 20px;
-  margin: 5px;
-}
+// Initialize
+showSlide(0);
