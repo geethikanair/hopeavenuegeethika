@@ -1,153 +1,137 @@
-/* Reset */
-* {
+/* Reset some basic styles */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   font-family: 'Lato', sans-serif;
-  background-color: #fff;
-  color: #333;
 }
 
-/* Header & Nav */
-header {
-  background-color: #7ca16c;
-}
-
-.nav-container {
+/* Navigation Bar */
+nav {
+  background-color: #006400; /* Dark green background */
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 40px;
 }
 
-.logo-title {
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-left a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-left a:hover {
+  color: #006400; /* Green when hover */
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo {
-  width: 50px;
+.nav-right img {
+  height: 40px;
 }
 
-.logo-title h1 {
-  font-family: 'CooperBlack', sans-serif;
-  font-size: 32px;
-  color: white;
+.nav-right span {
+  font-family: 'Cooper Black', sans-serif;
+  font-size: 24px;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 15px;
+/* Hero Section */
+.hero {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+.hero h1 {
+  font-family: 'Cooper Black', sans-serif;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-nav ul li a:hover {
-  background-color: white;
-  color: #7ca16c;
+.hero p {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #333;
 }
 
 /* What We Do Section */
 .what-we-do {
-  text-align: center;
-  padding: 40px 20px;
+  padding: 50px;
+  background-color: #ffffff;
 }
 
 .what-we-do h2 {
   font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #7ca16c;
+  font-size: 36px;
   margin-bottom: 20px;
-  text-transform: capitalize;
 }
 
 .what-we-do p {
-  max-width: 800px;
-  margin: 0 auto 15px;
-  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #555;
+  opacity: 1;
+  transform: none;
 }
 
 /* Donation Drive Section */
 .donation-drive {
+  padding: 50px;
+  background-color: #f2f2f2;
   text-align: center;
-  background: #f7f7f7;
-  padding: 50px 20px;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.donation-drive .text h3 {
+.donation-drive h2 {
   font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  color: #7ca16c;
-  margin-bottom: 10px;
-  font-size: 24px;
-  text-transform: capitalize;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.donation-drive .text p {
+.donation-drive .text {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.6;
+  min-height: 200px;
 }
 
-/* Carousel Dots */
-.carousel-dots {
-  text-align: center;
-  margin: 20px 0;
+/* Dots Navigation */
+.dots {
+  margin-top: 20px;
 }
 
-.carousel-dots .dot {
-  display: inline-block;
-  height: 8px;
-  width: 8px;
+.dot {
+  height: 12px;
+  width: 12px;
   margin: 0 5px;
   background-color: #bbb;
   border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
-.carousel-dots .active {
-  background-color: #333;
+.dot.active {
+  background-color: #006400; /* active dot green */
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 12px;
-  color: #666;
-  padding: 20px;
-}
-
-.footer-logo {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-.social-icons img {
-  width: 20px;
-  margin: 5px;
-}
-
-/* Animation for sliding */
+/* Animation for slide in */
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -159,7 +143,26 @@ footer {
   }
 }
 
+/* Animation for slide out */
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+/* Donation drive text animation - default state */
 .donation-drive .text {
   animation: slideIn 1s ease forwards;
 }
-
+.nav-left a:hover {
+  background-color: white;
+  color: #006400;
+  padding: 5px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 100, 0, 0.2);
+}
