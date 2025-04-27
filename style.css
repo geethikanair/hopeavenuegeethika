@@ -6,14 +6,14 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
 header {
-    background-color: #0073e6;
+    background-color: #3498db;
     padding: 1rem;
     text-align: center;
 }
@@ -50,61 +50,65 @@ main {
 
 /* Section styles */
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #0073e6;
+    color: #3498db;
 }
 
 section p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 #intro h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-#services .service-card {
-    background-color: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-#services .service-card h3 {
-    font-size: 1.5rem;
-    color: #0073e6;
-}
-
-#impact .impact-stats {
+#programs .program {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-#impact .stat {
-    text-align: center;
-    background-color: #fff;
-    padding: 2rem;
-    border: 1px solid #ddd;
+#programs .program .text {
+    width: 50%;
+}
+
+#programs .program .image img {
+    width: 100%;
     border-radius: 8px;
-    width: 30%;
 }
 
-#get-involved ul {
-    list-style: none;
-    padding: 0;
+#programs .program h3 {
+    font-size: 1.8rem;
+    color: #3498db;
 }
 
-#get-involved ul li {
-    margin-bottom: 0.5rem;
+#programs .program p {
+    font-size: 1.1rem;
+}
+
+#get-involved .cta {
+    display: flex;
+    gap: 1rem;
+}
+
+#get-involved .button {
+    padding: 1rem 2rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
     font-size: 1.2rem;
+}
+
+#get-involved .button:hover {
+    background-color: #2980b9;
 }
 
 /* Footer styles */
