@@ -1,0 +1,120 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0073e6;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0073e6;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+#intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#services .service-card {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#services .service-card h3 {
+    font-size: 1.5rem;
+    color: #0073e6;
+}
+
+#impact .impact-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+#impact .stat {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+}
+
+#get-involved ul {
+    list-style: none;
+    padding: 0;
+}
+
+#get-involved ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
