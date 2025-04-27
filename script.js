@@ -17,7 +17,7 @@ const slides = [
   },
   {
     title: "Beanie Drive",
-    text: "Currently, the beanie group is local to the bay area. We work together as a community to donate handmade beanies to Blue Star Moms, Stanford NICU, military troops, and homeless shelters. Providing warmth and comfort for the past several winters. Contact us if you would like to participate!"
+    text: "Currently, the beanie group is local to the bay area. We work together as a community to donate handmade beanies to groups such as Blue Star Moms, Stanford NICU, military troops, and homeless shelters. Our effort has provided many with warmth and comfort during the past several winters. If you are not in the bay area but would like to participate, feel free to contact us!"
   },
   {
     title: "Masks",
@@ -33,6 +33,12 @@ let currentSlide = 0;
 
 function showSlide(index) {
   const changingText = document.getElementById('changingText');
+
+  // Reset and restart the animation
+  changingText.style.animation = 'none';
+  void changingText.offsetWidth; // Reflow trick to restart animation
+  changingText.style.animation = 'slideIn 1s ease forwards';
+
   changingText.innerHTML = `
     <h3>${slides[index].title}</h3>
     <p>${slides[index].text}</p>
@@ -48,7 +54,6 @@ function nextSlide() {
   showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 10000); // 10 seconds
-
 // Initialize
 showSlide(0);
+setInterval(nextSlide, 10000); // Change every 10 seconds
