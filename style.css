@@ -1,124 +1,132 @@
-/* Reset and basic styles */
+/* Reset some defaults */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
 }
 
+/* Header */
 header {
-    background-color: #3498db;
-    padding: 1rem;
-    text-align: center;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+header h1 {
+  font-size: 48px;
+  color: #7ca16c;
+  margin-bottom: 10px;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 1rem;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+header hr {
+  border: 1px solid #d3d3d3;
+  margin-top: 10px;
 }
 
-/* Main content styles */
-main {
-    padding: 2rem 0;
+/* What We Do Section */
+.what-we-do {
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.what-we-do h2 {
+  font-size: 32px;
+  color: #7ca16c;
+  margin-bottom: 20px;
 }
 
-/* Section styles */
-section {
-    margin-bottom: 3rem;
+.what-we-do p {
+  max-width: 800px;
+  margin: 0 auto 15px;
+  font-size: 16px;
 }
 
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #3498db;
+/* Donation Drive Section */
+.donation-drive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+  margin: 40px 0;
+  padding: 20px;
+  gap: 20px;
 }
 
-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+.donation-drive .image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 5px;
 }
 
-#intro h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.donation-drive .text {
+  max-width: 400px;
 }
 
-#programs .program {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+.donation-drive .text h3 {
+  color: #7ca16c;
+  margin-bottom: 10px;
 }
 
-#programs .program .text {
-    width: 50%;
+.donation-drive .text p {
+  font-size: 14px;
 }
 
-#programs .program .image img {
-    width: 100%;
-    border-radius: 8px;
+/* Carousel Dots */
+.carousel-dots {
+  text-align: center;
+  margin: 20px 0;
 }
 
-#programs .program h3 {
-    font-size: 1.8rem;
-    color: #3498db;
+.carousel-dots .dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
 }
 
-#programs .program p {
-    font-size: 1.1rem;
+.carousel-dots .active {
+  background-color: #333;
 }
 
-#get-involved .cta {
-    display: flex;
-    gap: 1rem;
-}
-
-#get-involved .button {
-    padding: 1rem 2rem;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-}
-
-#get-involved .button:hover {
-    background-color: #2980b9;
-}
-
-/* Footer styles */
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #666;
 }
 
-footer p {
-    font-size: 1rem;
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.social-icons img {
+  width: 20px;
+  margin: 5px;
 }
